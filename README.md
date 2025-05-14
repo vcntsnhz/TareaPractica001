@@ -1,16 +1,26 @@
-# multiplexor_web
+🔧 **PASOS PARA CONFIGURAR FLUTTER TRAS CLONAR EL REPOSITORIO**
 
-A new Flutter project.
+1. Verificar que Flutter Web esté habilitado
 
-## Getting Started
+> flutter doctor
 
-This project is a starting point for a Flutter application.
+> flutter config --enable-web
 
-A few resources to get you started if this is your first Flutter project:
+2. Instalar las dependencias del proyecto
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+> flutter pub get
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. Compilar para web y ejecutar
+   
+> flutter run -d chrome
+
+🧪 **EXTRAS ÚTILES**
+
+1. Verificar que el archivo **firebase_options.dart** esté en el proyecto (lo genera el comando "flutterfire configure").
+Si no deja ejecutar ese comando, se puede ejecutar el comando:
+> ./flutterfire.bat configure
+
+Esto debido a que el archivo necesario para ejecutar "flutterfire configure" fue movido a la carpeta del proyecto para evitar errores.
+
+2. Verificar que en index.html (en web/) existan los scripts de Firebase.
+
